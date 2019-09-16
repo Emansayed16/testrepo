@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif; text-align: center;}
+        * {box-sizing: border-box;}
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            margin-left: 300px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 500px;
+        }
+        fieldset {
+            overflow: hidden;
+            border: none;
+        }
+
+        .some-class {
+            float: left;
+            clear: none;
+        }
+
+        label {
+            float: left;
+            clear: none;
+            display: block;
+            padding: 2px 1em 0 0;
+        }
+
+        input[type=radio],
+        input.radio {
+            float: left;
+            clear: none;
+            margin: 2px 0 0 2px;
+        }
+    </style>
+</head>
+<body>
+
+<h3 style="margin-right: 200px;">Contact Form</h3>
+<div class="container">
+    <form method="get" action="">
+        <p style="text-align: left">Name</p>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <p style="text-align: left">Your Opinion about website</p>
+        <fieldset>
+            <div class="some-class">
+                <input type="radio" class="radio" name="x" value="y" id="x" />
+                <label for="x">Very Good</label>
+                <input type="radio" class="radio" name="x" value="z" id="y" />
+                <label for="y">Good</label>
+                <input type="radio" class="radio" name="x" value="z" id="z" />
+                <label for="z">Fair</label>
+            </div>
+        </fieldset>
+        <p style="text-align: left">Gender</p>
+        <fieldset>
+            <div class="some-class">
+                <input type="radio" class="radio" name="x" value="y" id="x1" />
+                <label for="x1">Male</label>
+                <input type="radio" class="radio" name="x" value="z" id="y1" />
+                <label for="y1">Female</label>
+            </div>
+        </fieldset>
+        <label for="Status">Marital Status</label>
+        <select id="Status" name="Status">
+            <option value="single">single</option>
+            <option value="married">married</option>
+            <option value="other" selected>other</option>
+        </select>
+        <label for="know">You Know about my website from</label>
+        <select id="know" name="country" multiple>
+            <option value="internet">internet</option>
+            <option value="friend">friend</option>
+            <option value="search engine">search engine</option>
+            <option value="other">other</option>
+        </select>
+        <p style="text-align: left">Email</p>
+        <input type="email" id="email" name="email" placeholder="Your email..">
+        <p style="text-align: left">Subject</p>
+        <input type="text" id="subject" name="subject" placeholder="Subject..">
+
+        <label for="subject">Message</label>
+        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        html, body, .Container
+        {
+            height: 100%;
+        }
+        .Container:before
+        {
+            content: '';
+            height: 100%;
+            float: left;
+        }
+        .HeightTaker
+        {
+            position: relative;
+            z-index: 1;
+        }
+        .HeightTaker:after
+        {
+            content: '';
+            clear: both;
+            display: block;
+        }
+        .Wrapper
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+        .Inverse, .Inverse > *
+        {
+            -moz-transform: rotateX(180deg);
+            -ms-transform: rotateX(180deg);
+            -o-transform: rotate(180deg);
+            -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+        }
+
+        .Table
+        {
+            display: table;
+            height: 100%;
+            width: 100%;
+        }
+        .Column
+        {
+            display: table-cell;
+        }
+
+        /*For demonstration only*/
+        p
+        {
+            font-size: 1.3em;
+        }
+
+        .Important
+        {
+            font-weight: bolder;
+            color: black;
+        }
+
+        body > .Container
+        {
+            text-align: center;
+        }
+
+        .Header
+        {
+            padding: 50px 0;
+        }
+        .Footer
+        {
+            padding: 30px 0;
+        }
+        .Header
+        {
+            background-color: #7F8673;
+        }
+        .Navigation
+        {
+            background-color: #AAB9C6;
+            color: #B75151;
+        }
+        .C1
+        {
+            background-color: #93A998;
+            width: 300px;
+        }
+        .C2
+        {
+            background-color: #DEDADA;
+        }
+        .C3
+        {
+            background-color: #F5F5F5;
+            color: #B75151;
+            text-align: left;
+            width: 700px;
+        }
+        .Footer
+        {
+            background-color: #b5a8b7;
+        }
+        .margin
+        {
+            margin-left: 20px;
+        }
+    /*    Login Style */
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="Container">
+    <div class="Header">
+    </div>
+    <div class="Navigation">
+        <a href="lfowijpe">Home</a>
+        <a href="contact.html" target="second">contact me</a>
+        <a href="lfowijpe">my hoppies</a>
+    </div>
+    <div class="HeightTaker">
+        <div class="Wrapper Container Inverse">
+            <div>
+                <div class="Footer">
+                    <p><a target="_blank" href="https://facebook.com">Facebook</a></p>
+                    <p><a target="_blank" href="https://twitter.com">Twitter</a></p>
+                </div>
+            </div>
+            <div class="HeightTaker">
+                <div class="Wrapper Content">
+                    <div class="Table">
+                        <div class="Column C1">
+                            <h2>Login Form</h2>
+
+                            <form action="/action_page.php">
+                                <div class="container">
+                                    <input type="text" placeholder="Enter Username" name="name" required>
+
+                                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                    <button type="submit">Login</button>
+                                    <label>
+                                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                                    </label>
+                                </div>
+
+                                <div class="container">
+                                    <button type="button" class="cancelbtn">Cancel</button>
+                                    <span class="psw">Forgot <a href="#">password?</a></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="Column C3">
+                          <iframe src="contact.html" name="second" width="300" height="300" frameborder="0">
+                          </iframe>
+                            <h1 style="text-align: center">My profile</h1>
+                            <div class="margin Important">
+                                <p><span>Name : </span> Eman</p>
+                            </div>
+                            <div class="margin Important">
+                                <p><span>Age : </span> 23</p>
+                            </div>
+                            <div class="margin Important">
+                                <p><span>Address : </span> test address</p>
+                            </div>
+                            <div class="margin Important">
+                                <p><span>Phones : </span> 123213</p>
+                            </div>
+                            <div class="margin Important">
+                                <p><span>Faculty : </span> Faculty</p>
+                                <p><span>Faculty Website : </span>
+                                <a target="_blank" href="https://www.minia.edu.eg/Minia/">University</a>
+                                </p>
+                            </div>
+                            <div class="margin Important">
+                                <p>
+                                    <span>Hobbies : </span>
+                                <ul style="margin-left: 20px; list-style-type: upper-roman;">
+                                    <li>Sport</li>
+                                    <li>Gaming</li>
+                                </ul>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="Column C2">
+                            <h1>Personal Photo</h1>
+                            <img src="https://via.placeholder.com/500" width="300" height="600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
